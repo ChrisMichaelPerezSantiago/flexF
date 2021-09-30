@@ -19,8 +19,8 @@ const responseSchema = {
 const main = async () => {
   const flexF =
     (lookUp = axios) =>
-    ({ method = "get", url = null }) =>
-      lookUp[axiosMethods[method]](url) || null;
+    ({ method = "get", url = null, params = {} }) =>
+      lookUp[axiosMethods[method]](url, { params }) || null;
 
   const responseLookup =
     (lookUp) =>
@@ -41,7 +41,8 @@ const main = async () => {
   const r = responseLookup(
     await flexF(axios)({
       method: "get",
-      url: "https://jsonplaceholder.typicode.com/todos",
+      url: "https://jsonplaceholder.typicode.com/todos/",
+      params: { id: 1 },
     })
   );
 
