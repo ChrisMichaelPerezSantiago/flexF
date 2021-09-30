@@ -19,11 +19,44 @@ _Axios response reference_
 ```
 
 ```js
-const response = responseLookup(...);
-const result = response("data") // response reference
+const axios = require("axios").default;
+const { flexF, responseLookup } = require("flex");
+
+const response = responseLookup(
+  flexF(axios)({
+    /* config */
+  })
+);
+const result = response("data"); // response reference
 ```
 
+## Request Config: requestConfig
+
+[Follow The Request Config documentation provided by axios.](https://github.com/axios/axios/blob/master/README.md)
+
 ---
+
+## Request example
+
+```javascript
+const axios = require("axios").default;
+const { flexF, responseLookup } = require("flex");
+
+const r = responseLookup(
+  await flexF(axios)({
+    method: "get",
+    url: "https://jsonplaceholder.typicode.com/todos/",
+    requestConfig: {
+      params: {
+        id: 1,
+      },
+      responseType: "json",
+    },
+  })
+);
+
+const result = r("data");
+```
 
 ## **:handshake: Contributing**
 
