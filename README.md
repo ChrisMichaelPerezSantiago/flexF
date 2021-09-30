@@ -20,7 +20,7 @@ _Axios response reference_
 
 ```js
 const axios = require("axios").default;
-const { flexF, responseLookup } = require("flex");
+const { flexF, responseLookup } = require("flexF");
 
 const response = responseLookup(
   flexF(axios)({
@@ -40,7 +40,7 @@ const result = response("data"); // response reference
 
 ```javascript
 const axios = require("axios").default;
-const { flexF, responseLookup } = require("flex");
+const { flexF, responseLookup } = require("flexF");
 
 const r = responseLookup(
   await flexF(axios)({
