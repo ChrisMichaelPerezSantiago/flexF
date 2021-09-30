@@ -1,4 +1,4 @@
-const { axios } = require("./src/common");
+const { axios, qs } = require("./src/common");
 
 const axiosMethods = {
   get: "get",
@@ -16,11 +16,28 @@ const responseSchema = {
   request: {},
 };
 
+const requestConfig = {
+  url: null,
+  method: "get", //default
+  baseURL: null,
+  headers: {},
+  params: {},
+  paramsSerializer: (params) => {
+    return qs.stringify(params, { arrayFormat: "brackets" });
+  },
+};
+
 const main = async () => {
   const flexF =
     (lookUp = axios) =>
-    ({ method = "get", url = null, params = {} }) =>
-      lookUp[axiosMethods[method]](url, { params }) || null;
+    ({
+      method = "get",
+      url = null,
+      requestConfig = { ...require("./src/RequestConfig") },
+    }) =>
+      lookUp[axiosMethods[method]](url, {
+        ...requestConfig,
+      }) || null;
 
   const responseLookup =
     (lookUp) =>
@@ -42,11 +59,16 @@ const main = async () => {
     await flexF(axios)({
       method: "get",
       url: "https://jsonplaceholder.typicode.com/todos/",
-      params: { id: 1 },
+      requestConfig: {
+        params: {
+          id: 1,
+        },
+        responseType: "json",
+      },
     })
   );
 
-  const result = r("data");
+  const result = r("config");
   console.log(result);
 };
 
