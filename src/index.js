@@ -18,8 +18,14 @@ const responseSchema = {
 
 const flexF =
   (lookUp = axios) =>
-  ({ method = "get", url = null, params = {} }) =>
-    lookUp[axiosMethods[method]](url, { params }) || null;
+  ({
+    method = "get",
+    url = null,
+    requestConfig = { ...require("./RequestConfig") },
+  }) =>
+    lookUp[axiosMethods[method]](url, {
+      ...requestConfig,
+    }) || null;
 
 const responseLookup =
   (lookUp) =>
