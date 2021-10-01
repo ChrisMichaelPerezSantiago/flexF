@@ -1,5 +1,5 @@
 {
-  "name": "flexF",
+  "name": "flexf",
   "version": "1.0.0",
   "description": "Axios flex fetch",
   "main": "./src/index.js",
@@ -8,7 +8,7 @@
     "test": "nodemon test.js"
   },
   "keywords": [
-    "flexF",
+    "flexf",
     "flex fetch",
     "axios flex fetch",
     "fetch"
