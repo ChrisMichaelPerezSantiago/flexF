@@ -1,15 +1,34 @@
 {
   "name": "flex",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Axios flex fetch",
+  "main": "./src/index.js",
   "scripts": {
     "dev": "nodemon ./src/index.js",
     "test": "nodemon test.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "flexF",
+    "flex fetch",
+    "axios flex fetch",
+    "fetch"
+  ],
+  "author": {
+    "name": "Chris Michael",
+    "email": "chrisperezsantiago1@gmail.com",
+    "social": {
+      "github": "https://github.com/ChrisMichaelPerezSantiago",
+      "twitter": "https://twitter.com/Chris5855M"
+    }
+  },
+  "contributors": [
+    {
+      "name": "Chris Michael",
+      "url": "https://github.com/ChrisMichaelPerezSantiago",
+      "reason": "Project Leader, and Developer"
+    }
+  ],
+  "license": "MIT",
   "dependencies": {
     "axios": "^0.21.4",
     "nodemon": "^2.0.13",
