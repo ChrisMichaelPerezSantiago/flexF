@@ -1,3 +1,5 @@
+const { qs } = require("../common/index");
+
 const responseTypeOpts = {
   arraybuffer: "arraybuffer",
   document: "document",
