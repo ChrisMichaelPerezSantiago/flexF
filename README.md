@@ -2,8 +2,10 @@
 
 > Axios flex fetch
 
+<a href="https://nodei.co/npm/flexF/"><img src="https://nodei.co/npm/flexF.png"></a>
+
+
 Proof Of Concept: Project/Library in initial state.
-_Not yet available for use._
 
 ## Response Lookup
 
