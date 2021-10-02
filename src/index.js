@@ -23,7 +23,7 @@ const responseSchema = {
 const flexF =
   (lookUp = axios) =>
   ({
-    method = "get",
+    method = axiosMethods.get,
     url = null,
     requestConfig = { ...require("./RequestConfig") },
   }) =>
@@ -32,7 +32,7 @@ const flexF =
     }) || null;
 
 const responseLookup =
-  (lookUp) =>
+  (lookUp = flexF) =>
   (expression = { ...responseSchema }) =>
     lookUp[expression] || null;
 

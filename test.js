@@ -35,7 +35,7 @@ const main = async () => {
   const flexF =
     (lookUp = axios) =>
     ({
-      method = "get",
+      method = axiosMethods.get,
       url = null,
       requestConfig = { ...require("./src/RequestConfig") },
     }) =>
@@ -44,7 +44,7 @@ const main = async () => {
       }) || null;
 
   const responseLookup =
-    (lookUp) =>
+    (lookUp = flexF) =>
     (expression = { ...responseSchema }) =>
       lookUp[expression] || null;
 
