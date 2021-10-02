@@ -4,7 +4,6 @@
 
 <a href="https://nodei.co/npm/flexf/"><img src="https://nodei.co/npm/flexf.png"></a>
 
-
 Proof Of Concept: Project/Library in initial state.
 
 ## Response Lookup
@@ -31,6 +30,19 @@ const response = responseLookup(
 );
 const result = response("data"); // response reference
 ```
+
+## Shorthand methods for Axios HTTP requests
+
+Axios also provides a set of shorthand methods for performing different types of requests. The methods are as follows:
+
+- [x] **request**
+- [x] **get**
+- [x] **delete**
+- [x] **head**
+- [x] **options**
+- [x] **post**
+- [x] **put**
+- [x] **patch**
 
 ## Request Config: requestConfig
 
