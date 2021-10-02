@@ -21,7 +21,7 @@ _Axios response reference_
 
 ```js
 const axios = require("axios").default;
-const { flexF, responseLookup } = require("flexF");
+const { flexF, responseLookup } = require("flexf");
 
 const response = responseLookup(
   flexF(axios)({
@@ -54,7 +54,7 @@ Axios also provides a set of shorthand methods for performing different types of
 
 ```javascript
 const axios = require("axios").default;
-const { flexF, responseLookup } = require("flexF");
+const { flexF, responseLookup } = require("flexf");
 
 const r = responseLookup(
   await flexF(axios)({
