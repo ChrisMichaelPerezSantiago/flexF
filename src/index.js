@@ -1,10 +1,14 @@
 const { axios } = require("./common");
 
 const axiosMethods = {
+  request: "request",
   get: "get",
-  post: "post",
   delete: "delete",
+  head: "head",
+  options: "options",
+  post: "post",
   put: "put",
+  patch: "patch",
 };
 
 const responseSchema = {
