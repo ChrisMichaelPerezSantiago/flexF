@@ -28,6 +28,10 @@
       "reason": "Project Leader, and Developer"
     }
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ChrisMichaelPerezSantiago/flexF"
+  },
   "license": "MIT",
   "dependencies": {
     "axios": "^0.21.4",
