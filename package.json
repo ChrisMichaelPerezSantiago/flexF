@@ -1,6 +1,6 @@
 {
   "name": "flexf",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Axios flex fetch",
   "main": "./src/index.js",
   "scripts": {
