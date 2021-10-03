@@ -1,6 +1,7 @@
+const Enum = require("./Enum");
 const { axios } = require("./common");
 
-const axiosMethods = {
+const axiosMethods = Enum({
   request: "request",
   get: "get",
   delete: "delete",
@@ -9,7 +10,7 @@ const axiosMethods = {
   post: "post",
   put: "put",
   patch: "patch",
-};
+});
 
 const responseSchema = {
   data: {},

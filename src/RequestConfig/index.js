@@ -1,12 +1,13 @@
+const Enum = require("../Enum");
 const { qs } = require("../common/index");
 
-const responseTypeOpts = {
+const responseTypeOpts = Enum({
   arraybuffer: "arraybuffer",
   document: "document",
   json: "json",
   text: "text",
   stream: "stream",
-};
+});
 
 const lookupResponseType =
   (lookUp, defaultCase = responseTypeOpts.json) =>
