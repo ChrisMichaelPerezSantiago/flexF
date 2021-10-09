@@ -24,7 +24,7 @@ const axios = require("axios").default;
 const { flexF, responseLookup } = require("flexf");
 
 const response = responseLookup(
-  flexF(axios)({
+  await flexF(axios)({
     /* config */
   })
 );
