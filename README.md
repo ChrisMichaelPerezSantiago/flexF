@@ -28,7 +28,7 @@ const response = responseLookup(
     /* config */
   })
 );
-const result = response("data"); // response reference
+const result = response("status") === 200 ? response("data") : null; // response reference
 ```
 
 ## Shorthand methods for Axios HTTP requests
